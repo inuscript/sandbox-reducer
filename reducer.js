@@ -10,7 +10,16 @@ const products = (state = {}, action) => {
 const cart = (state = [], action) => {
   switch(action.type){
     case 'ADD_PRODUCT':
-      return [...state, action.payload]
+      return [...state, action.payload.id]
+    default:
+      return state
+  }
+}
+
+const total = (state = 0, action) => {
+  switch(action.type){
+    case 'ADD_PRODUCT':
+      return state + action.payload.price
     default:
       return state
   }
@@ -19,5 +28,6 @@ const cart = (state = [], action) => {
 // item + computed
 module.exports = combineReducers({
   cart: cart,
+  total: total,
   products: products
 })
