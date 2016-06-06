@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "reselect": "^2.5.1"
   },
   "devDependencies": {
     "mocha": "^2.5.3"
